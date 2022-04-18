@@ -43,7 +43,7 @@ def get_driver():
     # return driver
 
     options = webdriver.ChromeOptions()
-    # options.add_argument('--headless')
+    options.add_argument('--headless')
     return webdriver.Chrome(options=options)
 
 
