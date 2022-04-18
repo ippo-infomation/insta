@@ -132,13 +132,14 @@ def tagsearch(tag):
 
 def click_follow_fav():
     # driver.save_screenshot('a.png')
+    time.sleep(10)
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     target = driver.find_elements_by_class_name('_9AhH0')[0]
 
     actions = ActionChains(driver)
     actions.move_to_element(target)
     actions.perform()
-    time.sleep(0.3)
+    time.sleep(3)
 
     limit = range(random.randint(200, 300))
     # limit = range(400)
