@@ -1,0 +1,20 @@
+name: selenium-insta
+on: [push]
+jobs:
+    selenium:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-python@v2
+              with:
+                  python-version: '3.8'
+                  architecture: 'x64'
+            - run: |
+                  pip3 install requests
+                  pip3 install beautifulsoup4
+                  pip3 install lxml
+                  pip3 install get-chrome-driver --upgrade
+                  pip3 install numpy
+                  pip3 install pandas
+                  pip3 install selenium==3.141.0
+                  python3 insta.py
