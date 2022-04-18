@@ -90,7 +90,7 @@ def do_login(driver):
             actions.perform()
 
             # 適当（3秒間待つように対応しています）
-            time.sleep(5)
+            time.sleep(10)
 
             # 遷移
             # 遷移後のURLでログイン可否をチェック
